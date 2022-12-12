@@ -35,7 +35,7 @@ How to run the project:
     -README.md
 ```
 
-TO RUN THE PROJECT:
+#TO RUN THE PROJECT:
 
     There are two ways to run the project.
     1. Bulk run all the test cases
