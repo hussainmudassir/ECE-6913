@@ -1,0 +1,10 @@
+
+Single Stage -----------------------------Core Performance Metrics-----------------------------
+Number of cycles: 8
+Cycles per instruction: 0.032
+Instructions per cycle: 31.25
+
+Five Stage -----------------------------Core Performance Metrics-----------------------------
+Number of cycles: 11
+Cycles per instruction: 0.044
+Instructions per cycle: 22.727272727272727

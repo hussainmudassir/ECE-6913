@@ -12,14 +12,16 @@ class InsMem(object):
         self.id = name
         with open(ioDir + "/imem.txt") as im:
             self.IMem = [data.replace("\n", "") for data in im.readlines()]
-        while len(self.IMem) < MemSize: 
-            self.IMem.append('00000000')
+        # while len(self.IMem) < MemSize: 
+        #     self.IMem.append('00000000')
 
     def readInstr(self, ReadAddress):
-        instr = ''
-        for i in range(4): 
-            instr += self.IMem[ReadAddress + i]
-        return instr
+        # instr = ''
+        # for i in range(4): 
+        #     instr += self.IMem[ReadAddress + i]
+        # return 
+        return "".join([i for idx,i in enumerate(self.IMem) if (idx >= ReadAddress) and (idx < ReadAddress + 4)])
+
           
 class DataMem(object):
     def __init__(self, name, ioDir):
