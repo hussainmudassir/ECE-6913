@@ -10,26 +10,66 @@
             -Code.asm
             -dmem.txt
             -imem.txt
+             -----Simulation-output--------
+            -FS_DMEMResult.txt
+            -FS_RFResult.txt
+            -PerformanceMetrics_Result.txt
+            -SS_DMEMResult.txt
+            -SS_RFResult.txt
+            -StateResult_FS.txt
+            -StateResult_SS.txt
         -TC1
             -ExpectedResults
             -Code.asm
             -dmem.txt
             -imem.txt
+            -----Simulation-output--------
+            -FS_DMEMResult.txt
+            -FS_RFResult.txt
+            -PerformanceMetrics_Result.txt
+            -SS_DMEMResult.txt
+            -SS_RFResult.txt
+            -StateResult_FS.txt
+            -StateResult_SS.txt
         -TC2
             -ExpectedResults
             -Code.asm
             -dmem.txt
             -imem.txt
+            -----Simulation-output--------
+            -FS_DMEMResult.txt
+            -FS_RFResult.txt
+            -PerformanceMetrics_Result.txt
+            -SS_DMEMResult.txt
+            -SS_RFResult.txt
+            -StateResult_FS.txt
+            -StateResult_SS.txt
         -TC3
             -ExpectedResults
             -Code.asm
             -dmem.txt
             -imem.txt
+            -----Simulation-output--------
+            -FS_DMEMResult.txt
+            -FS_RFResult.txt
+            -PerformanceMetrics_Result.txt
+            -SS_DMEMResult.txt
+            -SS_RFResult.txt
+            -StateResult_FS.txt
+            -StateResult_SS.txt
         -TC4
             -ExpectedResults
             -Code.asm
             -dmem.txt
             -imem.txt
+            -----Simulation-output--------
+            -FS_DMEMResult.txt
+            -FS_RFResult.txt
+            -PerformanceMetrics_Result.txt
+            -SS_DMEMResult.txt
+            -SS_RFResult.txt
+            -StateResult_FS.txt
+            -StateResult_SS.txt
     -dmem.txt
     -imem.txt
     -final.py
