@@ -48,5 +48,5 @@ TO RUN THE PROJECT:
     
     2. Test custom test case one at a time. 
         To run just one test case or a custom test case, we need to add dmem.txt and imem.txt in the same directory as final.py and run the following command:
-        `python3 final.py'
+        `python3 final.py`
         The output of the same will be generated in the same directory as the input. 
