@@ -97,22 +97,19 @@ class Core(object):
         self.ext_imem = imem
         self.ext_dmem = dmem
 
-    def calculatePerformance(self, write_option, core_text, ioDir):
+    def PerformanceMetrics(self, w_a, core_text, ioDir):
         opFilePath = ioDir + "/PerformanceMetrics_Result.txt"
-        instruction_count = len(self.ext_imem.IMem) / 4
-        with open(opFilePath, write_option) as f:
-            f.write(f'\n{core_text} Core Performance Metrics-----------------------------\n')
-            f.write(f'Number of cycles taken: {self.cycle}\n')
-            f.write(f'Cycles per instruction: {self.cycle / instruction_count}\n')
-            f.write(f'Instructions per cycle: {instruction_count / self.cycle}\n')
+        ins_count = len(self.ext_imem.IMem) / 4
+        with open(opFilePath, w_a) as f:
+            f.write(f'\n{core_text} -----------------------------Core Performance Metrics-----------------------------\n')
+            f.write(f'Number of cycles: {self.cycle}\n')
+            f.write(f'Cycles per instruction: {self.cycle / ins_count}\n')
+            f.write(f'Instructions per cycle: {ins_count / self.cycle}\n')
 
 class SingleStageCore(Core):
     def __init__(self, ioDir, imem, dmem):
         super(SingleStageCore, self).__init__(ioDir + "//SS_", imem, dmem)
         self.opFilePath = ioDir + "/StateResult_SS.txt"
-
-    # def calculatePerformance(self, write_option):
-        # super().calculatePerformance(write_option, 'Single Stage')
 
     def step(self):
 
@@ -333,9 +330,6 @@ class FiveStageCore(Core):
         self.state.EX['nop'] = True
         self.state.MEM['nop'] = True
         self.state.WB['nop'] = True
-    
-    # def calculatePerformance(self, write_option):
-    #     super().calculatePerformance(write_option, 'Five Stage')
 
     def step(self):
     
@@ -866,8 +860,8 @@ if __name__ == "__main__":
             
             dmem_ss.outputDataMem()
             dmem_fs.outputDataMem()
-            ssCore.calculatePerformance('w', 'Single Stage', ioDir)
-            fsCore.calculatePerformance('a', 'Five Stage', ioDir)
+            ssCore.PerformanceMetrics('w', 'Single Stage', ioDir)
+            fsCore.PerformanceMetrics('a', 'Five Stage', ioDir)
     else: 
         ioDir = os.path.abspath(args.iodir)
         imem = InsMem("Imem", ioDir)
@@ -886,5 +880,5 @@ if __name__ == "__main__":
         
         dmem_ss.outputDataMem()
         dmem_fs.outputDataMem()
-        ssCore.calculatePerformance('w', 'Single Stage', ioDir)
-        fsCore.calculatePerformance('a', 'Five Stage', ioDir)
+        ssCore.PerformanceMetrics('w', 'Single Stage', ioDir)
+        fsCore.PerformanceMetrics('a', 'Five Stage', ioDir)
