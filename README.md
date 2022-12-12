@@ -1,6 +1,7 @@
-##How to run the project:
+## How to run the project:
 
-#File structure 
+# File structure 
+
 ```
 -Project (ECE-6193)
     -test_cases
@@ -35,7 +36,7 @@
     -README.md
 ```
 
-##TO RUN THE PROJECT:
+## TO RUN THE PROJECT:
 
     There are two ways to run the project.
     1. Bulk run all the test cases
